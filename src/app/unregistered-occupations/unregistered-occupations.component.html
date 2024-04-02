@@ -1,0 +1,21 @@
+
+<div>
+    <h1 style="margin-left: 15%;">Unregistered Jobs List</h1>
+</div>
+
+  <div *ngFor="let listData of jobList" class="body">
+    
+    <div fxFlex="100" fxLayout="row">
+        <div fxFlex="10" fxLayout="column"></div>
+
+        <div fxFlex="40" fxLayout="column"  class="list"> {{listData.jobName}}
+        </div>
+        <div fxFlex="10" fxLayout="column" class="buttons"> 
+            <button mat-buttom type="button" (click)="delete(listData.id)">Delete</button>
+        </div>
+
+        <div fxFlex="40"></div>
+    </div>
+  </div>
+
+ 

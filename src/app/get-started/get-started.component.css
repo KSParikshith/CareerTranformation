@@ -1,0 +1,95 @@
+
+.form-box {
+    margin-left: 15%;
+    width: 50%;
+    padding-top: 70px;
+}
+
+.form-bgImg {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+
+h1 {
+    font-weight: 600;
+    font-size: 36px;
+}
+
+h3 {
+    font-weight: 100;
+}
+
+b{
+    font-weight: 500;
+}
+
+
+.form-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    color: azure;
+    justify-content: center;
+    text-align: left;
+}
+
+ .form-left input,.form-right input{
+    border-radius: 3px;
+    height: 40px;
+    width: 100%;
+    background: rgba(128, 128, 128, 0.459);
+    justify-content: center;
+    color: rgb(248, 238, 238);
+}
+.form-left mat-label{
+    color: white;
+}
+    
+
+
+.form-right mat-label{
+    color: white;
+}
+
+.comments {
+    height: 100px;
+    width: 100%;
+    background: rgba(128, 128, 128, 0.459);
+    color: white;
+    border-radius: 3px;
+}
+.comments mat-label {
+    color: white;
+}
+
+
+.sub { 
+    border: none;
+    border-radius: 18px;
+    padding: 10px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    outline: none;
+  }
+  .sub:active{
+    transform: scale(0.95);
+  }
+  
+  .sub {
+    background-color: rgba(128, 128, 128, 0.459); 
+    color: black; 
+  }
+  .sub:hover {
+    background-color:  #42a47069;
+    color: white;
+  }  

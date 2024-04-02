@@ -1,0 +1,48 @@
+
+.bgImg{
+  margin-top: 10%;
+  position: absolute;
+  width: 100%;
+  height: 78%;
+}
+
+.content{
+    text-align: start;
+    margin-top: 25px;
+    margin-left: 10%;
+    align-items: center;
+    padding: 20px;
+    background:  #fff;
+    position: relative;
+    width: 70%; 
+    height: 70%;
+    background: none;
+}
+
+ul{
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+
+
+a:link {
+  text-decoration: none;
+  color: rgb(12, 109, 72);
+}
+  
+a:visited {
+  text-decoration: none;
+  color: rgb(12, 109, 72);
+}
+    
+a:hover {
+  text-decoration: none;
+  color: rgb(200, 255, 0);
+}
+  
+a:active {
+  text-decoration: none;
+  color: rgb(211, 126, 6);
+}

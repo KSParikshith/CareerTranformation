@@ -1,0 +1,132 @@
+<div fxFlex="100"  fxLayout="row" class="box">
+  <div fxFlex="100" fxLayout="column">
+    <app-page-header></app-page-header>
+  </div>    
+
+
+  <div fxFlex="100" fxLayout="row" class="form-box">
+    <!-- body -->
+    <img src="..\..\assets\images\form-background.jpg" class="bgImg">   
+         
+      <div  class="form-div" id="form-div" #form_div>  
+        <div [formGroup]="formData" class="form-container personal-form">   
+              <mat-form-field>
+                <mat-label for="name">Name: </mat-label>
+                <input type="text" matInput placeholder="Name" formControlName="Name" maxlength="30">
+              </mat-form-field>
+                <br>
+                <mat-form-field>
+                  <mat-label for="dob">Date of Birth: </mat-label>
+                  <input type="date" matInput formControlName="DateOfBirth" value="2018-07-22" min="2010-01-01" max="2022-12-31">
+                </mat-form-field> <br>
+                
+                <mat-form-field>
+                  <mat-label for="location">Location: </mat-label>
+                  <mat-select name="Location" id="Location" formControlName="Location">
+                    <mat-option *ngFor="let locationData of loc"  
+                            [value]=locationData.locationName>  
+                        {{locationData.locationName}}  
+                    </mat-option>  
+                  
+                  </mat-select>
+                </mat-form-field><br>
+                
+                <mat-form-field>
+                  <mat-label for="contactNo">Contact Number: </mat-label>
+                  <input type="number" matInput placeholder="ContactNo" formControlName="ContactNo">
+                </mat-form-field><br>
+                
+                <mat-form-field>
+                  <mat-label for="email">Email: </mat-label>
+                  <input type="email" matInput placeholder="Email" formControlName="Email">
+                </mat-form-field><br>
+                
+                
+        </div>
+          
+        <div [formGroup]="formData" class="form-container academic-form"> 
+
+          <mat-label for="graduation" style="align-self: flex-start;">Graduaton Status: </mat-label>
+          <mat-radio-group aria-label="Select an option" formControlName="GraduationStatus" style="align-self: flex-start;">
+            <mat-radio-button value="pass">Passed out </mat-radio-button> &nbsp;
+            <mat-radio-button value="pursuing">Pursuing </mat-radio-button>
+          </mat-radio-group>
+          <br>
+          
+              <mat-form-field>
+                <mat-label>Stream: </mat-label>
+                <mat-select name="stream" id="Stream" formControlName="Stream"><br>
+                  <mat-option value="B.Com">B.Com</mat-option>
+                  <mat-option value="BBA(Accounts)">BBA(Accounts)</mat-option>
+                  <mat-option value="Others">Others</mat-option>
+                </mat-select>
+              </mat-form-field>
+              
+              <mat-form-field>
+                <mat-label for="yearOfPass">Year Of Pass: </mat-label>
+                <input type="number" matInput placeholder="YearOfPass" formControlName="YearOfPass" min="2000" max={{this.today.getFullYear()+2}}>
+              </mat-form-field>
+              
+
+              <!-- <mat-form-field>
+              <mat-label for="occupation">Desired Occupation: </mat-label>
+              <mat-select name="occupation" id="DesiredOccupation" formControlName="occupation"><br>
+                <mat-option *ngFor = "let jobData of jobRole"
+                  [value]=jobData.jobId>  
+                  {{jobData.job}}
+              </mat-option>
+              </mat-select>
+              </mat-form-field><br> -->
+               
+              <mat-form-field>
+                <mat-label>Desired Occupation: </mat-label>
+                <input type="text" matInput id="occupation" formControlName="DesiredOccupation" list="occupation_data" autocomplete = "off" 
+                (blur) = getJobData($event)>
+                  <datalist id="occupation_data">
+                    <option *ngFor = "let jobData of jobRole"
+                    [value]=jobData.job>  
+                    {{jobData.job}}</option>
+                  </datalist>
+              </mat-form-field>
+               
+        
+              <mat-form-field>
+                <mat-label for="salary">Expected Salary: </mat-label>
+                <input type="number" matInput splaceholder="ExpectedSalary" formControlName="ExpectedSalaryPerMonth">
+              </mat-form-field>
+              
+              <mat-form-field>
+                <mat-label for="duration">Time Investment: </mat-label>
+                <mat-select name="duration" id="duration" formControlName="TimeInvestment">
+                  <mat-option *ngFor = "let time of courseTime"
+                    [value]=time.courseDuration>
+                    {{time.courseDuration}} Months
+                  </mat-option>
+                </mat-select>
+              </mat-form-field>
+               
+              <mat-form-field>
+                <mat-label for="money">Money Investment: </mat-label>
+                <input type="number" matInput placeholder="MoneyInvestment" formControlName="MoneyInvestment"><br>
+              </mat-form-field>
+              <br>
+                <button type="submit" (click)="submitUserData() "class="sub">Submit</button>
+        </div>
+
+        <div class="overlay-container">
+            <div class="overlay">
+              <div class="overlay-panel overlay-left">
+                <h1>Academic Data Form</h1>
+                <button type="button" class="ghost" id="personal" (click)="button($event)">Personal Form</button>
+              </div>
+              <div class="overlay-panel overlay-right">
+                <h1>Personal Data Form</h1>
+                <br>                  
+                <button type="button" class="ghost" id="academic" (click)="button($event)">Academic Form</button>
+              </div>
+            </div>
+          </div>
+      </div>
+  </div> 
+
+</div>

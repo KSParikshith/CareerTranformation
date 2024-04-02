@@ -1,0 +1,40 @@
+<div fxFlex="100" fxLayout="row" class="box">
+
+    <div fxFlex="20" fxLayout="column" class="menu">
+        <br><br>
+        <button type="button" class="btn" (click)="toggleComponentVisible('unreg')">Unregistered Courses</button>
+        <button type="button" class="btn" (click)="toggleComponentVisible('issues')">Result Issues</button>
+        <button type="button" class="btn" (click)="toggleComponentVisible('addCourses')">Other Issues</button>
+        <button type="button" class="btn" (click)="back()">Back</button>
+        <button type="button" class="btn" (click)="logout()">Logout</button>
+
+    </div>
+
+    <div fxFlex="75" fxLayout="column" class="content">
+        
+
+        <ng-container  *ngIf="visibleComponent === 'unreg'; then unreg; else second"></ng-container>
+         <ng-template #second>
+         <ng-container #second *ngIf="visibleComponent === 'issues'; then issues else third"></ng-container>
+         </ng-template>
+          <ng-template #third>
+          <ng-container #third *ngIf="visibleComponent === 'addCourses'; then addCourses"></ng-container>
+          </ng-template>
+
+            <ng-template #unreg>
+                <app-unregistered-occupations></app-unregistered-occupations>
+            </ng-template>
+
+            <ng-template #issues>
+                <app-result-issues></app-result-issues>
+            </ng-template>
+
+            <ng-template #addCourses>
+                <app-add-courses></app-add-courses>
+            </ng-template>
+        
+    </div>
+
+    <div fxFlex="5" fxLayout="5"></div>
+
+</div>

@@ -1,0 +1,17 @@
+<app-page-header></app-page-header>
+
+<div [formGroup]="loginForm" class="form-div">
+    <h1> Employee login </h1> <br>
+    <mat-form-field>
+        <mat-label for="name">UserName: </mat-label>
+        <input type="text" matInput placeholder="Enter Username" formControlName="username">
+    </mat-form-field>
+    <br>
+    <mat-form-field>
+        <mat-label for="password">Password: </mat-label>
+        <input type="password" matInput placeholder="Enter Password" formControlName="password">
+    </mat-form-field>
+    <br>
+    <button type="submit" (click)="login()">Login</button>
+    <!-- test -->
+</div>

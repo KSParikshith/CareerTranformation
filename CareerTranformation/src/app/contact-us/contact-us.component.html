@@ -1,0 +1,76 @@
+<div fxFlex="100"  fxLayout="column" class="box">
+  <div fxFlex="100" fxLayout="column">
+    <app-page-header></app-page-header>
+  </div>    
+
+  <img src="..\..\assets\images\background-image2.webp" class="bgImg">   
+  
+  <br>
+  <div fxFlex="100" fxLayout="row">
+  <div fxFlex="100" fxLayout="column">
+    <h1>Our Helpline Details</h1>
+    </div></div>
+  <div fxFlex="100" fxLayout="row" class="content">
+
+    
+
+    <div fxFlex="25" fxLayout="column">
+      <h2>Name</h2>
+      <br> 
+      <ul>
+        <li *ngFor="let user of users">
+          <div fxLayout="row"> 
+            {{ user.locationName }}
+          </div>
+          <br>
+        </li>
+      </ul>
+    </div>
+    
+    <div fxFlex="25" fxLayout="column">
+      <h2>Number</h2>
+      <br> 
+      <ul>
+        <li *ngFor="let user of users">
+          <div fxLayout="row"> 
+            {{ user.locationName }}
+          </div>
+          <br>
+        </li>
+      </ul>
+      
+    </div>
+
+    <div fxFlex="25" fxLayout="column">
+      <h2>Email</h2>
+      <br> 
+      <ul>
+        <li *ngFor="let user of users">
+          <div fxLayout="row"> 
+            {{ user.locationName }}
+          </div>
+          <br>
+        </li>
+      </ul>
+      
+    </div>
+
+    <div fxFlex="25" fxLayout="column">
+      <h2>Location</h2>
+      <br> 
+      <ul>
+        <li *ngFor="let user of users">
+          <div fxLayout="row"> 
+            {{ user.locationName }}
+          </div>
+          <br>
+        </li>
+      </ul>
+      
+    </div> 
+
+    <!-- <p>contact : <a style="color: rgb(12, 109, 72);" href="tel: +91 91212 17969">+91 91212 17969</a> &nbsp;
+      email : <a href="#">ilearn@CareerTranformationvideos.com</a>
+    </p> -->
+</div>
+</div>

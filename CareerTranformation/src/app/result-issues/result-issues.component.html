@@ -1,0 +1,73 @@
+<div fxLayout="column">
+<div fxFlex="100" fxLayout="row" class="search" [formGroup]="formData"> 
+    <mat-label>Phone No : </mat-label>
+    <input type="text" matInput id="occupation" formControlName="search" list="list_data" 
+        autocomplete = "off" >
+        <datalist id="list_data">
+          <option *ngFor = "let contactData of userData" [value]=contactData.contactNo>  
+            {{contactData.contactNo}}</option>
+        </datalist>
+    <button mat-buttom type="button" (click) = "getUserData()" class="search-btn">Search</button>
+</div>
+<br><br>
+
+
+<div *ngFor="let listData of temp[0]" class="body" fxLayout="column" class="list">
+    
+    <!-- <div fxFlex="150" fxLayout="column"> -->
+        <!-- <div fxFlex="5" fxLayout="column"></div> -->
+
+        <div fxFlex="100" fxLayout="row"> 
+            <div fxFlex="15" fxLayout="column">Id : {{listData.userID}}</div>
+            <div fxFlex="15" fxLayout="column">Name : {{listData.name}} </div>
+            <div fxFlex="15" fxLayout="column">DoB : {{listData.dateOfBirth}}</div>
+            <div fxFlex="15" fxLayout="column">Location : {{listData.location}}</div>
+            <div fxFlex="15" fxLayout="column">Phone No. : {{listData.contactNo}}</div>
+            <div fxFlex="15" fxLayout="column">Email : {{listData.email}}</div>
+        </div>
+        <div fxFlex="100" fxLayout="row">
+            <div fxFlex="15" fxLayout="column">Graduation : {{listData.graduationStatus}}</div>
+            <div fxFlex="15" fxLayout="column">Year of Pass : {{listData.yearOfPass}}</div>
+            <div fxFlex="15" fxLayout="column">Job : {{listData.desiredOccupation}}</div>
+            <div fxFlex="15" fxLayout="column">Salary : {{listData.expectedSalaryPerMonth}}</div>
+            <div fxFlex="15" fxLayout="column">Time : {{listData.timeInvestment}}</div>
+            <div fxFlex="15" fxLayout="column">Money : {{listData.moneyInvestment}}</div>
+        </div>
+        <!-- <div fxFlex="100" fxLayout="row" class="buttons"> 
+            <button mat-buttom type="button" class="btn">Delete</button>
+        </div> -->
+
+        <!-- <div fxFlex="5"></div> -->
+    <!-- </div> -->
+</div>
+
+<div *ngFor="let listData of searchList" class="body" fxLayout="column" class="list">
+    
+    <!-- <div fxFlex="150" fxLayout="column"> -->
+        <!-- <div fxFlex="5" fxLayout="column"></div> -->
+
+        <div fxFlex="100" fxLayout="row"> 
+            <div fxFlex="15" fxLayout="column">Id : {{listData.userID}}</div>
+            <div fxFlex="15" fxLayout="column">Name : {{listData.name}} </div>
+            <div fxFlex="15" fxLayout="column">DoB : {{listData.dateOfBirth}}</div>
+            <div fxFlex="15" fxLayout="column">Location : {{listData.location}}</div>
+            <div fxFlex="15" fxLayout="column">Phone No. : {{listData.contactNo}}</div>
+            <div fxFlex="15" fxLayout="column">Email : {{listData.email}}</div>
+        </div>
+        <div fxFlex="100" fxLayout="row">
+            <div fxFlex="15" fxLayout="column">Graduation : {{listData.graduationStatus}}</div>
+            <div fxFlex="15" fxLayout="column">Year of Pass : {{listData.yearOfPass}}</div>
+            <div fxFlex="15" fxLayout="column">Job : {{listData.desiredOccupation}}</div>
+            <div fxFlex="15" fxLayout="column">Salary : {{listData.expectedSalaryPerMonth}}</div>
+            <div fxFlex="15" fxLayout="column">Time : {{listData.timeInvestment}}</div>
+            <div fxFlex="15" fxLayout="column">Money : {{listData.moneyInvestment}}</div>
+        </div>
+        <!-- <div fxFlex="100" fxLayout="row" class="buttons"> 
+            <button mat-buttom type="button" class="btn">Delete</button>
+        </div> -->
+
+        <!-- <div fxFlex="5"></div> -->
+    <!-- </div> -->
+</div>
+
+</div>

@@ -1,0 +1,142 @@
+.box{
+    display: flex;
+    flex-wrap: wrap;
+    background: rgb(255, 253, 253);
+}
+
+.head{
+    height: 10%;
+    font-size: 22px;
+    padding-top: 5px;
+    border-color: black;
+    border-top: 0px;
+}
+.title{
+    font-weight: 500;
+    font-size: 36px;
+    text-align: left;
+    padding-bottom: 10px;
+}
+
+.content{
+    padding: 20px;
+    background:  #fff;
+    border-radius: 25px;
+    box-shadow: 0 14px 28px rgb(0, 0, 0, 0.25), 0 10px 10px rgb(0, 0, 0, 0.22);
+    position: absolute;
+    margin-left: 10%;
+    overflow: scroll;
+    width: 100%;
+    max-width: 100%;
+    height: 80%;
+    max-height: 80%;
+}
+
+.defaultMsg {
+  font-size: 15px;
+  font-weight: 450;
+}
+
+
+@media print {
+  .box {
+    visibility: visible;
+    background:  #fff;
+    height: 0%;
+    width: 0%;
+    margin-top: 0%;
+    padding-top: 0px;
+    border-top: 0px;
+  }
+  .header{
+    visibility: hidden;
+    /* margin: 0px;
+    padding: 0px;
+    border: 0px; */
+  }
+  .bgImg{
+    visibility: hidden;
+  }
+  .content {
+    visibility: visible;
+  }
+  .content {
+    padding: 0px;
+    margin-top: 0px;
+    background:  #fff;
+    border-radius: 0px;
+    box-shadow: none;
+    position: absolute;
+    margin-left: 10%;
+    overflow: hidden;
+    width: 100%;
+    max-width: 100%;
+    height: 100%;
+    max-height: 500%;
+  }
+  .buttons {
+  visibility: hidden;
+  border-radius: 0px;
+  padding: 0px 0px; 
+  font-size: 0px;
+  font-weight:0;
+  margin: 0px 0px;
+  }
+
+}
+
+.course{
+   background: rgba(241, 205, 63, 0.481);
+   text-align: center;
+   font-weight: bold;
+   font-size: 15px;
+}
+
+
+.contact{
+    padding-left: 25px;
+    
+}
+
+.bgImg{
+    position: absolute;
+    width: 100%;
+    height: 81%;
+}
+
+
+.btn {
+    background-color:  #42a470; 
+    border: none;
+    border-radius: 18px;
+    padding: 10px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    outline: none;
+  }
+  .btn:active{
+    transform: scale(0.95);
+  }
+  
+  .btn {
+    background-color: white; 
+    color: black; 
+    border: 2px solid #42a470;
+  }
+  .btn:hover {
+    background-color:  #42a470;
+    color: white;
+  }  
+
+  
+  #links a:hover {
+    color: rgba(33, 15, 198, 0.962);
+  }

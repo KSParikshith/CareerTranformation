@@ -1,0 +1,136 @@
+
+.intro-bgImg {
+    height: 80%;
+    width: 100%;
+    position: absolute;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.intro{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.intro-box {
+    position: absolute;
+    text-align: left;
+    overflow-wrap: normal;
+    justify-content: center;
+    margin-top: 3%;
+    font-weight: 600;
+    font-size: 50px;
+    color: white;
+    letter-spacing: 1px;
+    word-spacing: 3px;
+    line-height: 50px;
+    width: 80%;
+}
+
+
+.intro-text {
+    background: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+    height: 40vh;
+    width: 80%;
+    margin-left: 5%;
+    
+}
+
+.mission-box {
+    background: none;
+    position: relative;  
+    height: 100%;   
+    width: 90%;
+    padding-top: 35%;
+    margin-left: 5%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.mission {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    /* height: 240vh; */
+    width: 100%;
+    position: relative;
+    padding: 5%;
+    margin-top: 5%;
+
+}
+
+.mission-title {
+    text-align: center;
+}
+.mission-title h1{
+    font-size: 32px;
+    font-weight: bold;
+}
+.mission-title h2 {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.mission-content {
+    background:  #fff;
+    border-radius: 25px;
+    box-shadow: 0 0 28px rgb(0, 0, 0, 0.05), 0 0 10px rgb(0, 0, 0, 0.1);
+    position: relative;
+    width: 100%;
+    height: 200px;
+    float: down;
+    align-items: center;
+    margin: 30px;
+}
+.mission-logo {
+    background: none;
+    height: 100px;
+    width: 110px;
+    justify-items: center;
+    align-self: center;
+}
+
+
+.solution {
+    align-self: center;
+    height: 100%;
+
+}
+
+.solution-box {
+    position: absolute;
+    align-self: center;
+    text-align: left;
+    overflow-wrap: normal;
+    justify-content: center;
+    margin-top: 10%;
+    font-size: 16px;
+    color: rgb(237, 229, 229);
+    letter-spacing: 1px;
+    word-spacing: 1px;
+    line-height: 30px; 
+    width: 60%;
+    margin-left: 14%;
+}
+
+ul{
+    
+    padding: 0;
+    padding-left: 19px;
+    margin: 0;
+}
+
+#sol-head {
+    font-size: 40px;
+    font-weight: 600;
+}
+#sol-list {
+    font-size: 22px;
+    font-weight: 500;
+}

@@ -1,0 +1,35 @@
+
+<div  class="form-div" id="form-div" #form_div>  
+    <div [formGroup]="formData" class="form-container personal-form">   
+          <mat-form-field>
+            <mat-label for="courseName">Course Name: </mat-label>
+            <input type="text" matInput placeholder="Course Name" formControlName="courseName">
+          </mat-form-field>
+            
+            <br>
+           
+            <mat-form-field>
+                <mat-label>Desired Occupation: </mat-label>
+                <input type="text" matInput id="occupation" formControlName="occupation" list="occupation_data" autocomplete = "off" 
+                                (blur) = getJobData($event)>
+                                         <datalist id="occupation_data">
+                                           <option *ngFor = "let jobData of jobRole"
+                                           [value]=jobData.job>  
+                                           {{jobData.job}}</option>
+                                         </datalist>
+              </mat-form-field><br>
+               
+            <mat-form-field>
+                <mat-label for="duration">Course Duration: </mat-label>
+                <input type="text" matInput id="duration" formControlName="duration" >                  
+                
+            </mat-form-field> <br>
+               
+            <mat-form-field>
+                <mat-label for="money">Course Fee: </mat-label>
+                <input type="number" matInput formControlName="money"><br>
+            </mat-form-field>
+            <br>
+            <button type="submit" class="sub">Submit</button>
+            
+    </div>
